@@ -22,9 +22,13 @@ application.layout = dbc.Container(
 # >
 
 
-@application.callback(Output('containerId', 'style'),
-                      Output('containerId', 'children'),
-                      Input('containerId', 'children'))
+@application.callback(
+
+    Output('containerId', 'style'),
+    Output('containerId', 'children'),
+    Input('containerId', 'children')
+
+)
 def mainCallback(containerChildren: None):
     '''  '''
 
@@ -35,6 +39,8 @@ def mainCallback(containerChildren: None):
 
     return (
 
+        # style <
+        # children <
         dict(
 
             frameStyle['containerStyle'],
@@ -42,6 +48,8 @@ def mainCallback(containerChildren: None):
 
         ),
         frameFunction()
+
+        # >
 
     )
 
