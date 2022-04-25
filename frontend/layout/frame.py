@@ -1,20 +1,24 @@
 # import <
+from dash import html, dcc
 import dash_bootstrap_components as dbc
+
+
+from backend.resource import jsonLoad # remove
 
 # >
 
-from backend.resource import jsonLoad
-frameStyle = jsonLoad(file = '/frontend/resource/style.json')
+
+# global <
+frameStyle = jsonLoad(file = '/frontend/style/frame.json') # update
+
+# >
 
 
-application.layout = dbc.Container(
+def frameFunction():
+    '''  '''
 
-    fluid = True,
-    style = style['containerStyle'],
-    children = [
+    return (
 
-        html.H1("ok")
+        html.H1('ok')
 
-    ]
-
-)
+    )
