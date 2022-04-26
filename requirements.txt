@@ -1,5 +1,3 @@
-
-
 async-generator==1.10
 attrs==21.4.0
 Brotli==1.0.9
