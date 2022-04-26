@@ -2,8 +2,9 @@
 from os import listdir
 from dash import html, dcc
 import dash_bootstrap_components as dbc
+from dash.dependencies import Input, Output
 
-from backend.resource import directory
+from backend.resource import directory, application
 from backend.resource import jsonLoad # remove
 
 # >
@@ -58,7 +59,7 @@ def frameFunction():
         # navigation <
         dbc.Row(
 
-            justify = 'evenly',
+            justify = 'between',
             style = dict(
 
                 **frameStyle['gRowStyle'],
@@ -69,17 +70,50 @@ def frameFunction():
 
                 dbc.Col(
 
-                    width = 'auto',
+                    className = 'd-grid gap-2',
                     children = dbc.Button(
 
                         children = k,
-                        color = frameStyle['gColorBlack']
+                        color = frameStyle['gColorBlack'],
+                        style = dict(
+
+                            href = v,
+                            color = frameStyle['gColorBlack'],
+                            **frameStyle['navigationButtonStyle'],
+                            fontFamily = frameStyle['gFontFamily'],
+                            backgroundColor = frameStyle['gColorWhite']
+
+                        )
 
                     )
 
                 )
 
             for k, v in frameData['navigationDict'].items()]
+
+        ),
+
+        # >
+
+        # divider <
+        # body <
+        dividerFunction(gStyle = frameStyle),
+        dbc.Row(
+
+            id = 'bodyRowId',
+            justify = 'center',
+            style = dict(
+
+                **frameStyle['gRowStyle'],
+                backgroundColor = frameStyle['gColorWhite']
+
+            ),
+            children = dbc.Col(
+
+                id = 'bodyColId',
+                style = frameStyle['bodyColStyle']
+
+            )
 
         ),
 
@@ -110,14 +144,13 @@ def frameFunction():
 
             )
 
-        )
+        ),
 
         # >
 
     )
 
-
-# callback for link redirects here #
+#
 
 
 def dividerFunction(gStyle: dict) -> list:

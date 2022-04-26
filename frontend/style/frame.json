@@ -1,5 +1,5 @@
 {
-  "gFont" : "sans-serif",
+  "gFontFamily" : "serif",
   "gColorBlack" : "rgb(17, 17, 17)",
   "gColorWhite" : "rgb(248, 240, 227)",
   "containerStyle" : {
@@ -29,14 +29,22 @@
     "display" : "block"
   },
   "gHrStyle" : {
+    "width" : "98%",
     "marginTop" : 10,
-    "marginBottom" : 10
-  },
-  "navigationRowStyle" : {
-
+    "marginBottom" : 10,
+    "border" : "1px solid rgb(17, 17, 17)"
   },
   "navigationButtonStyle" : {
-
+    "fontSize" : 25,
+    "paddingTop" : "5%",
+    "borderRadius" : 10,
+    "paddingBottom" : "5%"
+  },
+  "bodyColStyle" : {
+    "marginLeft" : 10,
+    "marginRight" : 10,
+    "borderRadius" : 10,
+    "border" : "2px solid rgb(17, 17, 17)"
   },
   "footerRowStyle" : {
     "marginBottom" : 15,
