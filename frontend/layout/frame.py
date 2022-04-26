@@ -1,7 +1,9 @@
 # import <
+from os import listdir
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
+from backend.resource import directory
 from backend.resource import jsonLoad # remove
 
 # >
@@ -60,6 +62,48 @@ def frameFunction():
 
         # >
 
+        # navigation <
+        dbc.Row(
+
+            justify = 'evenly',
+            style = dict(
+
+                **frameStyle['gRowStyle'],
+                backgroundColor = frameStyle['gColorWhite']
+
+            ),
+            children = [
+
+                dbc.Col(
+
+                    width = 'auto',
+                    align = 'center',
+                    style = {'backgroundColor' : '#FFFFFF'},
+                    children = html.Button(
+
+                        children = k,
+                        style = {'display' : 'block'}
+
+                    )
+
+                    # children = dbc.Button(
+                    #
+                    #     href = v,
+                    #     className = 'me-1',
+                    #     children = k,
+                    #     color = frameStyle['gColorBlack'],
+                    #     style = {'backgroundColor' : '#FFFFFF'}
+                    #
+                    # )
+
+                )
+
+            for k, v in frameData['navigationDict'].items()]
+
+        ),
+
+        # >
+
         # footer <
         dbc.Row(
 
@@ -97,3 +141,6 @@ def frameFunction():
         # >
 
     )
+
+
+# callback for link redirects here #

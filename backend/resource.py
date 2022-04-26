@@ -12,7 +12,7 @@ directory = ('/'.join(realpath.split('/')[:-2]))
 application = Dash(
 
     suppress_callback_exceptions = True,
-    external_stylesheets=[dbc.themes.GRID]
+    external_stylesheets = [dbc.themes.GRID]
 
 )
 server = application.server
