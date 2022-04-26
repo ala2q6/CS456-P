@@ -14,44 +14,59 @@ from backend.resource import jsonLoad # remove
 # global <
 application.layout = dbc.Container(
 
-    fluid = 'sm',
-    id = 'containerId'
+    id = 'containerId',
+    children = [
+
+        dbc.Row(
+
+            justify = 'center',
+            children = [
+
+                dbc.Col(html.Div('ok')),
+                dbc.Col(html.Div('ok')),
+                dbc.Col(html.Div('ok'))
+
+            ]
+
+        )
+
+    ]
 
 )
 
 # >
 
 
-@application.callback(
-
-    Output('containerId', 'style'),
-    Output('containerId', 'children'),
-    Input('containerId', 'children')
-
-)
-def mainCallback(containerChildren: None):
-    '''  '''
-
-    # local <
-    frameStyle = jsonLoad(file = '/frontend/style/frame.json')
-
-    # >
-
-    return (
-
-        # style <
-        # children <
-        dict(
-
-            frameStyle['containerStyle'],
-            backgroundColor = frameStyle['gColorWhite']
-
-        ),
-        frameFunction()
-
-        # >
-
-    )
+# @application.callback(
+#
+#     Output('containerId', 'style'),
+#     Output('containerId', 'children'),
+#     Input('containerId', 'children')
+#
+# )
+# def mainCallback(containerChildren: None) -> (list, dict):
+#     '''  '''
+#
+#     # local <
+#     frameStyle = jsonLoad(file = '/frontend/style/frame.json')
+#
+#     # >
+#
+#     return (
+#
+#         # style <
+#         # children <
+#         dict(
+#
+#             frameStyle['containerStyle'],
+#             backgroundColor = frameStyle['gColorBlack']
+#
+#         ),
+#         frameFunction()
+#
+#         # >
+#
+#     )
 
 
 # main <

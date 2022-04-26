@@ -10,5 +10,31 @@
     "position" : "fixed",
     "overflow-x" : "hidden",
     "overflow-y" : "scroll"
+  },
+  "logoCardBodyStyle" : {
+    "marginTop" : 15,
+    "borderTopLeftRadius" : 10,
+    "borderTopRightRadius" : 10
+  },
+  "CardBodyStyle" : {
+    "padding" : 5,
+    "marginLeft" : 15,
+    "marginRight" : 15
+  },
+  "logoImgStyle" : {
+    "width" : "50%",
+    "display" : "block",
+    "marginLeft" : "auto",
+    "marginRight" : "auto"
+  },
+  "footerCardBodyStyle" : {
+    "marginBottom" : 15,
+    "borderBottomLeftRadius" : 10,
+    "borderBottomRightRadius" : 10
+  },
+  "footerCardLinkStyle" : {
+    "fontSize" : 20,
+    "marginLeft" : "15%",
+    "marginRight" : "15%"
   }
 }
