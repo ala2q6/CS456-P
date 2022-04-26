@@ -12,26 +12,35 @@
     "overflow-y" : "scroll"
   },
   "gRowStyle" : {
-    "padding" : 5,
     "marginLeft" : 15,
-    "marginRight" : 15
+    "paddingLeft" : 5,
+    "marginRight" : 15,
+    "paddingRight" : 5
   },
   "headerRowStyle" : {
     "marginTop" : 15,
+    "paddingTop" : 9,
     "borderTopLeftRadius" : 10,
     "borderTopRightRadius" : 10
   },
   "headerImgStyle" : {
     "width" : "40%",
     "margin" : "auto",
-    "paddingBottom" : 5,
     "display" : "block"
+  },
+  "gHrStyle" : {
+    "marginTop" : 10,
+    "marginBottom" : 10
+  },
+  "navigationRowStyle" : {
+
   },
   "navigationButtonStyle" : {
 
   },
   "footerRowStyle" : {
     "marginBottom" : 15,
+    "paddingBottom" : 10,
     "borderBottomLeftRadius" : 10,
     "borderBottomRightRadius" : 10
   },

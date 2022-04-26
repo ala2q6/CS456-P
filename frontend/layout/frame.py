@@ -37,28 +37,24 @@ def frameFunction():
                 backgroundColor = frameStyle['gColorWhite']
 
             ),
-            children = [
+            children = html.A(
 
-                # header <
-                # divider <
-                html.A(
+                href = '/',
+                children = html.Img(
 
-                    href = '/',
-                    children = html.Img(
+                    src = frameData['headerImgSrc'],
+                    style = frameStyle['headerImgStyle']
 
-                        src = frameData['headerImgSrc'],
-                        style = frameStyle['headerImgStyle']
+                )
 
-                    )
-
-                ),
-                html.Hr(style = dict(backgroundColor = frameStyle['gColorBlack']))
-
-                # >
-
-            ]
+            )
 
         ),
+
+        # >
+
+        # divider <
+        dividerFunction(),
 
         # >
 
@@ -77,30 +73,23 @@ def frameFunction():
                 dbc.Col(
 
                     width = 'auto',
-                    align = 'center',
-                    style = {'backgroundColor' : '#FFFFFF'},
-                    children = html.Button(
+                    children = dbc.Button(
 
                         children = k,
-                        style = {'display' : 'block'}
+                        color = frameStyle['gColorBlack']
 
                     )
-
-                    # children = dbc.Button(
-                    #
-                    #     href = v,
-                    #     className = 'me-1',
-                    #     children = k,
-                    #     color = frameStyle['gColorBlack'],
-                    #     style = {'backgroundColor' : '#FFFFFF'}
-                    #
-                    # )
 
                 )
 
             for k, v in frameData['navigationDict'].items()]
 
         ),
+
+        # >
+
+        # divider <
+        dividerFunction(),
 
         # >
 
@@ -115,26 +104,17 @@ def frameFunction():
                 backgroundColor = frameStyle['gColorWhite']
 
             ),
-            children = [
+            children = html.A(
 
-                # divider <
-                # footer <
-                html.Hr(style = dict(backgroundColor = frameStyle['gColorBlack'])),
-                html.A(
+                href = frameData['footerAHref'],
+                children = html.Img(
 
-                    href = frameData['footerAHref'],
-                    children = html.Img(
-
-                        src = frameData['footerImgSrc'],
-                        style = frameStyle['footerImgStyle']
-
-                    )
+                    src = frameData['footerImgSrc'],
+                    style = frameStyle['footerImgStyle']
 
                 )
 
-                # >
-
-            ]
+            )
 
         )
 
@@ -144,3 +124,28 @@ def frameFunction():
 
 
 # callback for link redirects here #
+
+
+def dividerFunction(gStyle: dict) -> list:
+    '''  '''
+
+    return dbc.Row(
+
+        style = dict(
+
+            **frameStyle['gRowStyle'],
+            backgroundColor = frameStyle['gColorWhite']
+
+        ),
+        children = html.Hr(
+
+            style = dict(
+
+                **frameStyle['gHrStyle'],
+                backgroundColor = frameStyle['gColorBlack']
+
+            )
+
+        )
+
+    )
