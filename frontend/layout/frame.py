@@ -22,33 +22,39 @@ def frameFunction():
 
     # >
 
-    return [
+    return (
 
         # logo <
         dbc.Row(
 
-            #
-            dbc.Row(
+            justify = 'center',
+            style = dict(
 
-                justify = 'center',
-                style = {'backgroundColor' : "rgb(248, 240, 227)"},
-                children = [
+                **frameStyle['gRowStyle'],
+                **frameStyle['logoRowStyle'],
+                backgroundColor = frameStyle['gColorWhite']
 
-                    dbc.Col(
+            ),
+            children = [
 
-                        children = [
+                # logo <
+                # divider <
+                html.A(
 
-                            dbc.Col(html.H1('ok')),
-                            dbc.Col(html.H1('ok')),
-                            dbc.Col(html.H1('ok'))
+                    href = '/',
+                    children = html.Img(
 
-                        ]
+                        src = frameData['logoImgSrc'],
+                        style = frameStyle['logoImgStyle']
 
                     )
 
-                ]
+                ),
+                html.Hr(style = dict(backgroundColor = frameStyle['gColorBlack']))
 
-            )
+                # >
+
+            ]
 
         ),
 
@@ -57,10 +63,37 @@ def frameFunction():
         # footer <
         dbc.Row(
 
-            #
+            justify = 'center',
+            style = dict(
+
+                **frameStyle['gRowStyle'],
+                **frameStyle['footerRowStyle'],
+                backgroundColor = frameStyle['gColorWhite']
+
+            ),
+            children = [
+
+                # divider <
+                # footer <
+                html.Hr(style = dict(backgroundColor = frameStyle['gColorBlack'])),
+                html.A(
+
+                    href = frameData['footerAHref'],
+                    children = html.Img(
+
+                        src = frameData['footerImgSrc'],
+                        style = frameStyle['footerImgStyle']
+
+                    )
+
+                )
+
+                # >
+
+            ]
 
         )
 
         # >
 
-    ]
+    )
