@@ -27,6 +27,7 @@ def frameFunction():
     return (
 
         # header <
+        # divider <
         dbc.Row(
 
             justify = 'center',
@@ -50,11 +51,7 @@ def frameFunction():
             )
 
         ),
-
-        # >
-
-        # divider <
-        dividerFunction(),
+        dividerFunction(gStyle = frameStyle),
 
         # >
 
@@ -89,11 +86,8 @@ def frameFunction():
         # >
 
         # divider <
-        dividerFunction(),
-
-        # >
-
         # footer <
+        dividerFunction(gStyle = frameStyle),
         dbc.Row(
 
             justify = 'center',
@@ -133,16 +127,16 @@ def dividerFunction(gStyle: dict) -> list:
 
         style = dict(
 
-            **frameStyle['gRowStyle'],
-            backgroundColor = frameStyle['gColorWhite']
+            **gStyle['gRowStyle'],
+            backgroundColor = gStyle['gColorWhite']
 
         ),
         children = html.Hr(
 
             style = dict(
 
-                **frameStyle['gHrStyle'],
-                backgroundColor = frameStyle['gColorBlack']
+                **gStyle['gHrStyle'],
+                backgroundColor = gStyle['gColorBlack']
 
             )
 
