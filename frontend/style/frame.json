@@ -16,12 +16,12 @@
     "marginLeft" : 15,
     "marginRight" : 15
   },
-  "logoRowStyle" : {
+  "headerRowStyle" : {
     "marginTop" : 15,
     "borderTopLeftRadius" : 10,
     "borderTopRightRadius" : 10
   },
-  "logoImgStyle" : {
+  "headerImgStyle" : {
     "width" : "40%",
     "margin" : "auto",
     "paddingBottom" : 5,

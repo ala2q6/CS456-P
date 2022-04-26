@@ -24,28 +24,28 @@ def frameFunction():
 
     return (
 
-        # logo <
+        # header <
         dbc.Row(
 
             justify = 'center',
             style = dict(
 
                 **frameStyle['gRowStyle'],
-                **frameStyle['logoRowStyle'],
+                **frameStyle['headerRowStyle'],
                 backgroundColor = frameStyle['gColorWhite']
 
             ),
             children = [
 
-                # logo <
+                # header <
                 # divider <
                 html.A(
 
                     href = '/',
                     children = html.Img(
 
-                        src = frameData['logoImgSrc'],
-                        style = frameStyle['logoImgStyle']
+                        src = frameData['headerImgSrc'],
+                        style = frameStyle['headerImgStyle']
 
                     )
 
