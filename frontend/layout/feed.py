@@ -28,6 +28,14 @@ def feedFunction(pKey: str, pData: dict, pStyle) -> list:
     for k, v in feedData.items():
 
         pass
+        # header
+        # subheader
+        # subject
+        # text
+
+        # image
+
+        # https://dash-bootstrap-components.opensource.faculty.ai/docs/components/card/
 
     # >
 

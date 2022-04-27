@@ -5,6 +5,7 @@ from dash_bootstrap_components import themes
 
 # >
 
+
 # global <
 realpath = path.realpath(__file__)
 directory = ('/'.join(realpath.split('/')[:-2]))
