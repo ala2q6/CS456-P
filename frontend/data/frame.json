@@ -1,0 +1,13 @@
+{
+  "headerImgSrc" : "https://cdn.discordapp.com/attachments/967994974568325130/967995057967890512/Impairment_Awareness-logos_black.png",
+  "frameStyle" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/style/frame.json",
+  "feedStyle" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/style/feed.json",
+  "navigationDict" : {
+    "Default" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/data/default.json",
+    "Topic-1" : "",
+    "Topic-2" : "",
+    "Topic-3" : ""
+  },
+  "footerAHref" : "https://github.com/ala2q6/CS456-P",
+  "footerImgSrc" : "https://cdn.discordapp.com/attachments/967994974568325130/968421364212056134/Behind_The_Project-logos_black.png"
+}
