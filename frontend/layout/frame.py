@@ -1,17 +1,11 @@
 # import <
-from os import listdir
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
-from backend.resource import directory, application
 from backend.resource import jsonLoad # remove
-
-# >
-
-
-# global <
-
+from frontend.layout.feed import feedFunction
+from backend.resource import directory, application
 
 # >
 
@@ -28,7 +22,7 @@ def frameFunction():
     return (
 
         # location <
-        dcc.Location(id = 'locationId'),
+        dcc.Location(id = 'locationId', refresh = False),
 
         # >
 
@@ -46,7 +40,7 @@ def frameFunction():
             ),
             children = html.A(
 
-                href = '/',
+                href = '/header',
                 children = html.Img(
 
                     src = frameData['headerImgSrc'],
@@ -64,7 +58,6 @@ def frameFunction():
         # navigation <
         dbc.Row(
 
-            justify = 'evenly',
             style = dict(
 
                 **frameStyle['gRowStyle'],
@@ -75,14 +68,12 @@ def frameFunction():
 
                 dbc.Col(
 
-                    # width = 'auto',
-                    # align = 'center',
                     className = 'd-grid gap-2',
                     children = dbc.Button(
 
-                        href = k,
-                        color = frameStyle['gColorBlack'],
+                        href = f'/{k}',
                         children = k.replace('-', ' '),
+                        color = frameStyle['gColorBlack'],
                         style = dict(
 
                             color = frameStyle['gColorBlack'],
@@ -113,12 +104,6 @@ def frameFunction():
 
                 **frameStyle['gRowStyle'],
                 backgroundColor = frameStyle['gColorWhite']
-
-            ),
-            children = dbc.Col(
-
-                id = 'bodyColId',
-                style = frameStyle['bodyColStyle']
 
             )
 
@@ -160,20 +145,20 @@ def frameFunction():
 
 @application.callback(
 
-    Output('bodyColId', 'children'),
+    Output('bodyRowId', 'children'),
     Input('locationId', 'pathname')
 
 )
-def frameCallback(pLocationPathname):
+def frameCallback(pLocation: str) -> list:
     '''  '''
 
-    print(pLocationPathname) # remove
+    # get data <
+    # return feed <
+    navData = jsonLoad(file = '/frontend/data/frame.json')['navigationDict']
+    return feedFunction(pKey = pLocation, pData = navData)
 
-    return (
+    # >
 
-        html.H1('ok')
-
-    )
 
 
 def dividerFunction(pStyle: dict) -> list:

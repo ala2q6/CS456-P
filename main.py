@@ -10,13 +10,13 @@ from backend.resource import server, application
 # >
 
 
-def mainFunction(pKey: str):
+def mainFunction(pProperty: str):
     '''  '''
 
     # if (children) then return list <
     # elif (style) then return dict <
-    if (pKey == 'children'): return frameFunction()
-    elif (pKey == 'style'):
+    if (pProperty == 'children'): return frameFunction()
+    elif (pProperty == 'style'):
 
         # load style <
         # return style <
@@ -42,8 +42,8 @@ if (__name__ == '__main__'):
 
         fluid = True,
         id = 'containerId',
-        style = mainFunction('style'),
-        children = mainFunction('children')
+        style = mainFunction(pProperty = 'style'),
+        children = mainFunction(pProperty = 'children')
 
     )
 

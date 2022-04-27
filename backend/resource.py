@@ -12,7 +12,7 @@ directory = ('/'.join(realpath.split('/')[:-2]))
 application = Dash(
 
     suppress_callback_exceptions = True,
-    external_stylesheets = [themes.GRID]#, themes.BOOTSTRAP]
+    external_stylesheets = [themes.GRID]
 
 )
 server = application.server

@@ -36,8 +36,10 @@
   },
   "navigationButtonStyle" : {
     "fontSize" : 25,
+    "button" : "focus",
     "paddingTop" : "5%",
     "borderRadius" : 10,
+    "cursive" : "grabbing",
     "textAlign" : "center",
     "paddingBottom" : "5%",
     "textDecoration" : "none",
@@ -46,8 +48,7 @@
   "bodyColStyle" : {
     "marginLeft" : 10,
     "marginRight" : 10,
-    "borderRadius" : 10,
-    "border" : "2px solid rgb(17, 17, 17)"
+    "borderRadius" : 10
   },
   "footerRowStyle" : {
     "marginBottom" : 15,
