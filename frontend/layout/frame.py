@@ -34,7 +34,7 @@ def frameFunction(pData: dict, pStyle: dict):
             ),
             children = html.A(
 
-                href = '/header',
+                href = '/',
                 children = html.Img(
 
                     src = pData['headerImgSrc'],
