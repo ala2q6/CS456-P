@@ -1,3 +1,15 @@
 {
-
+  "gCardBodyStyle" : {
+    "width" : "98%"
+  },
+  "cardHeaderStyle" : {
+    "height" : 20,
+    "borderTopLeftRadius" : 10,
+    "borderTopRightRadius" : 10
+  },
+  "cardFooterStyle" : {
+    "height" : 20,
+    "borderBottomLeftRadius" : 10,
+    "borderBottomRightRadius" : 10
+  }
 }
