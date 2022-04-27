@@ -27,6 +27,11 @@ def frameFunction():
 
     return (
 
+        # location <
+        dcc.Location(id = 'locationId'),
+
+        # >
+
         # header <
         # divider <
         dbc.Row(
@@ -52,7 +57,7 @@ def frameFunction():
             )
 
         ),
-        dividerFunction(gStyle = frameStyle),
+        dividerFunction(pStyle = frameStyle),
 
         # >
 
@@ -97,7 +102,7 @@ def frameFunction():
 
         # divider <
         # body <
-        dividerFunction(gStyle = frameStyle),
+        dividerFunction(pStyle = frameStyle),
         dbc.Row(
 
             id = 'bodyRowId',
@@ -121,7 +126,7 @@ def frameFunction():
 
         # divider <
         # footer <
-        dividerFunction(gStyle = frameStyle),
+        dividerFunction(pStyle = frameStyle),
         dbc.Row(
 
             justify = 'center',
@@ -150,26 +155,40 @@ def frameFunction():
 
     )
 
-#
+
+@application.callback(
+
+    Output('bodyColId', 'children'),
+    Input('locationId', 'pathname')
+
+)
+def frameCallback(pLocationPathname):
+    '''  '''
+
+    return (
+
+        html.H1('ok')
+
+    )
 
 
-def dividerFunction(gStyle: dict) -> list:
+def dividerFunction(pStyle: dict) -> list:
     '''  '''
 
     return dbc.Row(
 
         style = dict(
 
-            **gStyle['gRowStyle'],
-            backgroundColor = gStyle['gColorWhite']
+            **pStyle['gRowStyle'],
+            backgroundColor = pStyle['gColorWhite']
 
         ),
         children = html.Hr(
 
             style = dict(
 
-                **gStyle['gHrStyle'],
-                backgroundColor = gStyle['gColorBlack']
+                **pStyle['gHrStyle'],
+                backgroundColor = pStyle['gColorBlack']
 
             )
 

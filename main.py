@@ -10,51 +10,45 @@ from backend.resource import server, application
 # >
 
 
-# global <
-application.layout = dbc.Container(
-
-    fluid = True,
-    id = 'containerId'
-
-)
-
-# >
-
-
-@application.callback(
-
-    Output('containerId', 'style'),
-    Output('containerId', 'children'),
-    Input('containerId', 'children')
-
-)
-def mainCallback(pContainerChildren: None) -> (list, dict):
+def mainFunction(pKey: str):
     '''  '''
 
-    # local <
-    frameStyle = jsonLoad(file = '/frontend/style/frame.json')
+    # if (children) then return list <
+    # elif (style) then return dict <
+    if (pKey == 'children'): return frameFunction()
+    elif (pKey == 'style'):
 
-    # >
+        # load style <
+        # return style <
+        frameStyle = jsonLoad(file = '/frontend/style/frame.json')
+        return dict(
 
-    return (
-
-        # style <
-        # children <
-        dict(
-
-            frameStyle['containerStyle'],
+            **frameStyle['containerStyle'],
             backgroundColor = frameStyle['gColorBlack']
 
-        ),
-        frameFunction(),
-        # dcc.Location(id = 'locationId')
+        )
 
         # >
 
-    )
+    # >
 
 
 # main <
-if (__name__ == '__main__'): application.run_server(debug = True)
+if (__name__ == '__main__'):
+
+    # set layout <
+    # run <
+    application.layout = dbc.Container(
+
+        fluid = True,
+        id = 'containerId',
+        style = mainFunction('style'),
+        children = mainFunction('children')
+
+    )
+
+    application.run_server(debug = True)
+
+    # >
 
 # >
