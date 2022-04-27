@@ -1,23 +1,17 @@
 # import <
+from requests import get
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
-from backend.resource import jsonLoad # remove
 from frontend.layout.feed import feedFunction
-from backend.resource import directory, application
+from backend.resource import directory, application, bootLink
 
 # >
 
 
-def frameFunction():
+def frameFunction(pData: dict, pStyle: dict):
     '''  '''
-
-    # local <
-    frameData = jsonLoad(file = '/frontend/data/frame.json')
-    frameStyle = jsonLoad(file = '/frontend/style/frame.json')
-
-    # >
 
     return (
 
@@ -33,9 +27,9 @@ def frameFunction():
             justify = 'center',
             style = dict(
 
-                **frameStyle['gRowStyle'],
-                **frameStyle['headerRowStyle'],
-                backgroundColor = frameStyle['gColorWhite']
+                **pStyle['gRowStyle'],
+                **pStyle['headerRowStyle'],
+                backgroundColor = pStyle['gColorWhite']
 
             ),
             children = html.A(
@@ -43,15 +37,15 @@ def frameFunction():
                 href = '/header',
                 children = html.Img(
 
-                    src = frameData['headerImgSrc'],
-                    style = frameStyle['headerImgStyle']
+                    src = pData['headerImgSrc'],
+                    style = pStyle['headerImgStyle']
 
                 )
 
             )
 
         ),
-        dividerFunction(pStyle = frameStyle),
+        dividerFunction(pStyle = pStyle),
 
         # >
 
@@ -60,8 +54,8 @@ def frameFunction():
 
             style = dict(
 
-                **frameStyle['gRowStyle'],
-                backgroundColor = frameStyle['gColorWhite']
+                **pStyle['gRowStyle'],
+                backgroundColor = pStyle['gColorWhite']
 
             ),
             children = [
@@ -73,13 +67,13 @@ def frameFunction():
 
                         href = f'/{k}',
                         children = k.replace('-', ' '),
-                        color = frameStyle['gColorBlack'],
+                        color = pStyle['gColorBlack'],
                         style = dict(
 
-                            color = frameStyle['gColorBlack'],
-                            **frameStyle['navigationButtonStyle'],
-                            fontFamily = frameStyle['gFontFamily'],
-                            backgroundColor = frameStyle['gColorWhite']
+                            color = pStyle['gColorBlack'],
+                            **pStyle['navigationButtonStyle'],
+                            fontFamily = pStyle['gFontFamily'],
+                            backgroundColor = pStyle['gColorWhite']
 
                         )
 
@@ -87,7 +81,7 @@ def frameFunction():
 
                 )
 
-            for k, v in frameData['navigationDict'].items()]
+            for k, v in pData['navigationDict'].items()]
 
         ),
 
@@ -95,15 +89,15 @@ def frameFunction():
 
         # divider <
         # body <
-        dividerFunction(pStyle = frameStyle),
+        dividerFunction(pStyle = pStyle),
         dbc.Row(
 
             id = 'bodyRowId',
             justify = 'center',
             style = dict(
 
-                **frameStyle['gRowStyle'],
-                backgroundColor = frameStyle['gColorWhite']
+                **pStyle['gRowStyle'],
+                backgroundColor = pStyle['gColorWhite']
 
             )
 
@@ -113,24 +107,24 @@ def frameFunction():
 
         # divider <
         # footer <
-        dividerFunction(pStyle = frameStyle),
+        dividerFunction(pStyle = pStyle),
         dbc.Row(
 
             justify = 'center',
             style = dict(
 
-                **frameStyle['gRowStyle'],
-                **frameStyle['footerRowStyle'],
-                backgroundColor = frameStyle['gColorWhite']
+                **pStyle['gRowStyle'],
+                **pStyle['footerRowStyle'],
+                backgroundColor = pStyle['gColorWhite']
 
             ),
             children = html.A(
 
-                href = frameData['footerAHref'],
+                href = pData['footerAHref'],
                 children = html.Img(
 
-                    src = frameData['footerImgSrc'],
-                    style = frameStyle['footerImgStyle']
+                    src = pData['footerImgSrc'],
+                    style = pStyle['footerImgStyle']
 
                 )
 
@@ -149,16 +143,23 @@ def frameFunction():
     Input('locationId', 'pathname')
 
 )
-def frameCallback(pLocation: str) -> list:
+def frameCallback(pKey: str) -> list:
     '''  '''
 
-    # get data <
-    # return feed <
-    navData = jsonLoad(file = '/frontend/data/frame.json')['navigationDict']
-    return feedFunction(pKey = pLocation, pData = navData)
+    # get frame data <
+    # get feed style <
+    frameData = get(bootLink).json()
+    feedStyle = get(frameData['feedStyle']).json()
 
     # >
 
+    return feedFunction(
+
+        pKey = pKey,
+        pData = frameData,
+        pStyle = feedStyle
+
+    )
 
 
 def dividerFunction(pStyle: dict) -> list:

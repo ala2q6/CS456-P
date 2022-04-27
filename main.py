@@ -1,27 +1,41 @@
 # import <
+from requests import get
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
-from backend.resource import jsonLoad # remove
 from frontend.layout.frame import frameFunction
-from backend.resource import server, application
+from backend.resource import server, application, bootLink
 
 # >
 
 
-def mainFunction(pProperty: str):
+def mainFunction() -> tuple:
     '''  '''
 
-    # if (children) then return list <
-    # elif (style) then return dict <
-    if (pProperty == 'children'): return frameFunction()
-    elif (pProperty == 'style'):
+    # get frame data <
+    # get frame style <
+    frameData = get(bootLink).json()
+    frameStyle = get(frameData['frameStyle']).json()
 
-        # load style <
-        # return style <
-        frameStyle = jsonLoad(file = '/frontend/style/frame.json')
-        return dict(
+    # >
+
+    # filter data <
+    del frameData['navigationDict']['Default']
+
+    # >
+
+    return (
+
+        # children <
+        # style <
+        frameFunction(
+
+            pData = frameData,
+            pStyle = frameStyle
+
+        ),
+        dict(
 
             **frameStyle['containerStyle'],
             backgroundColor = frameStyle['gColorBlack']
@@ -30,20 +44,41 @@ def mainFunction(pProperty: str):
 
         # >
 
-    # >
+    )
+
+    # # if (children) then return list <
+    # # elif (style) then return dict <
+    # if (pProperty == 'children'): return frameFunction()
+    # elif (pProperty == 'style'):
+    #
+    #     # load style <
+    #     # return style <
+    #     frameStyle = jsonLoad(file = '/frontend/style/frame.json')
+    #     return dict(
+    #
+    #         **frameStyle['containerStyle'],
+    #         backgroundColor = frameStyle['gColorBlack']
+    #
+    #     )
+    #
+    #     # >
+    #
+    # # >
 
 
 # main <
 if (__name__ == '__main__'):
 
+    # boot <
     # set layout <
-    # run <
+    # run application <
+    mainChildren, mainStyle = mainFunction()
     application.layout = dbc.Container(
 
         fluid = True,
+        style = mainStyle,
         id = 'containerId',
-        style = mainFunction(pProperty = 'style'),
-        children = mainFunction(pProperty = 'children')
+        children = mainChildren,
 
     )
 

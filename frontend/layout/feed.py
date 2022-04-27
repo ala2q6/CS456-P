@@ -3,21 +3,31 @@ from dash import html, dcc
 import dash_bootstrap_components as dbc
 
 from backend.resource import directory, application
-from backend.resource import jsonLoad # remove
 
 # >
 
 
-def feedFunction(pKey: str, pData: dict) -> list:
+def feedFunction(pKey: str, pData: dict, pStyle) -> list:
     '''  '''
-
-    # local <
-    linkStr = pData[pKey] if (pKey in pData.keys()) else pData['default']
-
-    # >
 
     return (
 
 
 
     )
+
+    # # local <
+    # outputList = []
+    # linkStr = pData[pKey] if (pKey in pData['navigationDict'].keys()) else pData['default']
+    # data = jsonLoad(file = f'frontend/data/{linkStr}.json')
+    #
+    # # >
+    #
+    # # <
+    # for k, v in data.items():
+    #
+    #     pass
+    #
+    # # >
+    #
+    # return outputList
