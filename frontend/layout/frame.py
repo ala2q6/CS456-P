@@ -64,7 +64,7 @@ def frameFunction():
         # navigation <
         dbc.Row(
 
-            justify = 'between',
+            justify = 'evenly',
             style = dict(
 
                 **frameStyle['gRowStyle'],
@@ -75,14 +75,16 @@ def frameFunction():
 
                 dbc.Col(
 
+                    # width = 'auto',
+                    # align = 'center',
                     className = 'd-grid gap-2',
                     children = dbc.Button(
 
-                        children = k,
+                        href = k,
                         color = frameStyle['gColorBlack'],
+                        children = k.replace('-', ' '),
                         style = dict(
 
-                            href = v,
                             color = frameStyle['gColorBlack'],
                             **frameStyle['navigationButtonStyle'],
                             fontFamily = frameStyle['gFontFamily'],
@@ -164,6 +166,8 @@ def frameFunction():
 )
 def frameCallback(pLocationPathname):
     '''  '''
+
+    print(pLocationPathname) # remove
 
     return (
 

@@ -38,7 +38,10 @@
     "fontSize" : 25,
     "paddingTop" : "5%",
     "borderRadius" : 10,
-    "paddingBottom" : "5%"
+    "textAlign" : "center",
+    "paddingBottom" : "5%",
+    "textDecoration" : "none",
+    "border" : "2px solid rgb(17, 17, 17)"
   },
   "bodyColStyle" : {
     "marginLeft" : 10,

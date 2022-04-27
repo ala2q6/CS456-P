@@ -1,10 +1,10 @@
 {
   "headerImgSrc" : "https://cdn.discordapp.com/attachments/967994974568325130/967995057967890512/Impairment_Awareness-logos_black.png",
   "navigationDict" : {
-    "Topic 1" : "/",
-    "Topic 2" : "/",
-    "Topic 3" : "/",
-    "Topic 4" : "/"
+    "Topic-1" : "/",
+    "Topic-2" : "/",
+    "Topic-3" : "/",
+    "Topic-4" : "/"
   },
   "footerAHref" : "https://github.com/ala2q6/CS456-P",
   "footerImgSrc" : "https://cdn.discordapp.com/attachments/967994974568325130/968421364212056134/Behind_The_Project-logos_black.png"
