@@ -16,7 +16,7 @@ def frameFunction(pData: dict, pStyle: dict):
     return (
 
         # location <
-        dcc.Location(id = 'locationId', refresh = False),
+        dcc.Location(id = 'locationId'),#, refresh = True),
 
         # >
 

@@ -46,25 +46,6 @@ def mainFunction() -> tuple:
 
     )
 
-    # # if (children) then return list <
-    # # elif (style) then return dict <
-    # if (pProperty == 'children'): return frameFunction()
-    # elif (pProperty == 'style'):
-    #
-    #     # load style <
-    #     # return style <
-    #     frameStyle = jsonLoad(file = '/frontend/style/frame.json')
-    #     return dict(
-    #
-    #         **frameStyle['containerStyle'],
-    #         backgroundColor = frameStyle['gColorBlack']
-    #
-    #     )
-    #
-    #     # >
-    #
-    # # >
-
 
 # main <
 if (__name__ == '__main__'):
