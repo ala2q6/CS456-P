@@ -3,9 +3,6 @@
   "body" : {
     "title" : "title",
     "subtitle" : "subtitle",
-    "text" : [
-      "this is a test",
-      "this is another test"
-    ]
+    "text" : "this is text"
   }
 }
