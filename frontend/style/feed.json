@@ -21,7 +21,7 @@
   "textStyle" : {
     "fontSize" : 20,
     "marginTop" : 10,
-    "marginBottom" : 0
+    "marginBottom" : 30
   },
   "cardFooterStyle" : {
     "height" : 20,

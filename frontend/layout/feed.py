@@ -30,6 +30,24 @@ def imageFunction(v: dict, feedStyle: dict, frameStyle: dict):
     )
 
 
+def linkFunction(v: dict, feedStyle: dict, frameStyle: dict):
+    '''  '''
+
+    return dbc.CardLink(
+
+        href = v['href'],
+        children = v['name'],
+        style = dict(
+
+            color = frameStyle['gColorWhite'],
+            fontFamily = frameStyle['gFontFamily'],
+            backgroundColor = frameStyle['gColorBlack']
+
+        )
+
+    )
+
+
 def bodyFunction(v: dict, feedStyle: dict, frameStyle: dict):
     '''  '''
 
@@ -120,10 +138,12 @@ def feedFunction(pKey: str, pData: dict, pStyle: dict) -> list:
     # iterate element in data <
     for k, v in feedData.items():
 
+        # if (body) <
+        # if (link) <
         # if (image) <
-        # elif (body) <
+        if ('body' in k): outputList.append(bodyFunction(v, feedStyle, frameStyle))
+        if ('link' in k): outputList.append(linkFunction(v, feedStyle, frameStyle))
         if ('image' in k): outputList.append(imageFunction(v, feedStyle, frameStyle))
-        elif ('body' in k): outputList.append(bodyFunction(v, feedStyle, frameStyle))
 
         # >
 
