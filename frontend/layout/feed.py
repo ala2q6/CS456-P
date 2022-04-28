@@ -51,7 +51,9 @@ def bodyFunction(v: dict, feedStyle: dict, frameStyle: dict):
                 children = v['title'],
                 style = dict(
 
+                    **feedStyle['titleStyle'],
                     color = frameStyle['gColorWhite'],
+                    fontFamily = frameStyle['gFontFamily'],
                     backgroundColor = frameStyle['gColorBlack']
 
                 )
@@ -62,7 +64,9 @@ def bodyFunction(v: dict, feedStyle: dict, frameStyle: dict):
                 children = v['subtitle'],
                 style = dict(
 
+                    **feedStyle['subtitleStyle'],
                     color = frameStyle['gColorWhite'],
+                    fontFamily = frameStyle['gFontFamily'],
                     backgroundColor = frameStyle['gColorBlack']
 
                 )
@@ -73,7 +77,9 @@ def bodyFunction(v: dict, feedStyle: dict, frameStyle: dict):
                 children = v['text'],
                 style = dict(
 
+                    **feedStyle['textStyle'],
                     color = frameStyle['gColorWhite'],
+                    fontFamily = frameStyle['gFontFamily'],
                     backgroundColor = frameStyle['gColorBlack']
 
                 )
