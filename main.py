@@ -63,11 +63,6 @@ application.layout = dbc.Container(
 
 
 # main <
-if (__name__ == '__main__'):
-
-    # run application <
-    application.run_server()
-
-    # >
+if (__name__ == '__main__'): application.run_server()
 
 # >
