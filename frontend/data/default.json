@@ -2,7 +2,7 @@
   "image" : "http://res.cloudinary.com/springbok-puzzles-com/image/upload/q_40/q_60/v1411423180/Flag%20Large/60-100-10324-2.jpg",
   "body" : {
     "title" : "title",
-    "subtitle" : "subtitle",
+    "subtitle" : None,
     "text" : "this is text"
   }
 }
