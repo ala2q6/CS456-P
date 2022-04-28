@@ -3,6 +3,10 @@
     "margin" : 0,
     "width" : "98%"
   },
+  "linkStyle" : {
+    "marginTop" : 0,
+    "marginBottom" : 0
+  },
   "cardHeaderStyle" : {
     "height" : 20,
     "borderTopLeftRadius" : 10,

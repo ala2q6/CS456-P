@@ -39,6 +39,8 @@ def linkFunction(v: dict, feedStyle: dict, frameStyle: dict):
         children = v['name'],
         style = dict(
 
+            **feedStyle['linkStyle'],
+            **feedStyle['gCardBodyStyle'],
             color = frameStyle['gColorWhite'],
             fontFamily = frameStyle['gFontFamily'],
             backgroundColor = frameStyle['gColorBlack']
