@@ -5,7 +5,7 @@
     "subtitle" : null,
     "text" : "this is text"
   },
-  "body1" : {
+  "body2" : {
     "title" : "title",
     "subtitle" : "subtitle",
     "text" : "[test](https://github.com/ala2q6/CS456-P/edit/main/frontend/data/default.json) is text"
