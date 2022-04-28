@@ -47,23 +47,26 @@ def mainFunction() -> tuple:
     )
 
 
+# boot <
+# set layout <
+mainChildren, mainStyle = mainFunction()
+application.layout = dbc.Container(
+
+    fluid = True,
+    style = mainStyle,
+    id = 'containerId',
+    children = mainChildren,
+
+)
+
+# >
+
+
 # main <
 if (__name__ == '__main__'):
 
-    # boot <
-    # set layout <
     # run application <
-    mainChildren, mainStyle = mainFunction()
-    application.layout = dbc.Container(
-
-        fluid = True,
-        style = mainStyle,
-        id = 'containerId',
-        children = mainChildren,
-
-    )
-
-    application.run_server(debug = True)
+    application.run_server()
 
     # >
 
