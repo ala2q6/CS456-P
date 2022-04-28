@@ -14,7 +14,80 @@ with open(f'{directory}/frontend/style/feed.json', 'r') as f: # remove
     feedStyle = load(f) # remove
 
 
-def feedFunction(pKey: str, pData: dict, pStyle) -> list:
+def imageFunction(v: dict, feedStyle: dict, frameStyle: dict):
+    '''  '''
+
+    return dbc.CardImg(
+
+        src = v,
+        style = dict(
+
+            **feedStyle['gCardBodyStyle'],
+            backgroundColor = frameStyle['gColorBlack']
+
+        )
+
+    )
+
+
+def bodyFunction(v: dict, feedStyle: dict, frameStyle: dict):
+    '''  '''
+
+    return dbc.CardBody(
+
+        style = dict(
+
+            **feedStyle['gCardBodyStyle'],
+            backgroundColor = frameStyle['gColorBlack']
+
+        ),
+        children = [
+
+            # title <
+            # subtitle <
+            # text <
+            html.H4(
+
+                children = v['title'],
+                style = dict(
+
+                    color = frameStyle['gColorWhite'],
+                    backgroundColor = frameStyle['gColorBlack']
+
+                )
+
+            ),
+            html.H6(
+
+                children = v['subtitle'],
+                style = dict(
+
+                    color = frameStyle['gColorWhite'],
+                    backgroundColor = frameStyle['gColorBlack']
+
+                )
+
+            ),
+            html.P(
+
+                children = v['text'],
+                style = dict(
+
+                    color = frameStyle['gColorWhite'],
+                    backgroundColor = frameStyle['gColorBlack']
+
+                )
+
+            )
+
+            # >
+
+        ]
+
+    )
+
+
+def feedFunction(pKey: str, pData: dict, pStyle: dict) -> list:
     '''  '''
 
     # if (button) then subject else then default <
@@ -41,18 +114,21 @@ def feedFunction(pKey: str, pData: dict, pStyle) -> list:
     # iterate element in data <
     for k, v in feedData.items():
 
-        pass
+        # if (image) <
+        # elif (body) <
+        if ('image' in k): outputList.append(imageFunction(v, feedStyle, frameStyle))
+        elif ('body' in k): outputList.append(bodyFunction(v, feedStyle, frameStyle))
+
+        # >
 
     # >
-
-    # TODO https://dash-bootstrap-components.opensource.faculty.ai/docs/components/card/ #
 
     # footer <
     outputList.append(dbc.CardFooter(style = dict(
 
-        backgroundColor = frameStyle['gColorBlack'],
+        **feedStyle['gCardBodyStyle'],
         **feedStyle['cardFooterStyle'],
-        **feedStyle['gCardBodyStyle']
+        backgroundColor = frameStyle['gColorBlack']
 
     )))
 
