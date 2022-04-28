@@ -1,8 +1,13 @@
 {
   "image" : "http://res.cloudinary.com/springbok-puzzles-com/image/upload/q_40/q_60/v1411423180/Flag%20Large/60-100-10324-2.jpg",
-  "body" : {
+  "body1" : {
     "title" : "title",
     "subtitle" : null,
     "text" : "this is text"
-  }
+  },
+  "body1" : {
+    "title" : "title",
+    "subtitle" : "subtitle",
+    "text" : "[test](https://github.com/ala2q6/CS456-P/edit/main/frontend/data/default.json) is text"
+  },
 }
