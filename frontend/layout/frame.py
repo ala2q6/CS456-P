@@ -155,9 +155,9 @@ def frameCallback(pKey: str) -> list:
 
     return feedFunction(
 
-        pKey = pKey,
         pData = frameData,
-        pStyle = feedStyle
+        pStyle = feedStyle,
+        pKey = pKey.replace('/', '')
 
     )
 

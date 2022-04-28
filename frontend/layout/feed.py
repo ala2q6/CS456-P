@@ -1,17 +1,11 @@
 # import <
 from requests import get
-from json import load # remove
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
 from backend.resource import directory, application
 
 # >
-
-
-with open(f'{directory}/frontend/style/feed.json', 'r') as f: # remove
-
-    feedStyle = load(f) # remove
 
 
 def imageFunction(v: dict, feedStyle: dict, frameStyle: dict):
@@ -128,8 +122,8 @@ def feedFunction(pKey: str, pData: dict, pStyle: dict) -> list:
     # header <
     outputList.append(dbc.CardHeader(style = dict(
 
-        **feedStyle['gCardBodyStyle'],
-        **feedStyle['cardHeaderStyle'],
+        **pStyle['gCardBodyStyle'],
+        **pStyle['cardHeaderStyle'],
         backgroundColor = frameStyle['gColorBlack']
 
     )))
@@ -143,9 +137,9 @@ def feedFunction(pKey: str, pData: dict, pStyle: dict) -> list:
         # if (body) <
         # if (link) <
         # if (image) <
-        if ('body' in k): outputList.append(bodyFunction(v, feedStyle, frameStyle))
-        if ('link' in k): outputList.append(linkFunction(v, feedStyle, frameStyle))
-        if ('image' in k): outputList.append(imageFunction(v, feedStyle, frameStyle))
+        if ('body' in k): outputList.append(bodyFunction(v, pStyle, frameStyle))
+        if ('link' in k): outputList.append(linkFunction(v, pStyle, frameStyle))
+        if ('image' in k): outputList.append(imageFunction(v, pStyle, frameStyle))
 
         # >
 
@@ -154,8 +148,8 @@ def feedFunction(pKey: str, pData: dict, pStyle: dict) -> list:
     # footer <
     outputList.append(dbc.CardFooter(style = dict(
 
-        **feedStyle['gCardBodyStyle'],
-        **feedStyle['cardFooterStyle'],
+        **pStyle['gCardBodyStyle'],
+        **pStyle['cardFooterStyle'],
         backgroundColor = frameStyle['gColorBlack']
 
     )))
