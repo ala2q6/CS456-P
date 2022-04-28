@@ -5,13 +5,13 @@
     "subtitle" : null,
     "text" : "this is text"
   },
-  "link" : {
-    "name" : "See more!",
-    "href" : "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  },
   "body2" : {
     "title" : "title",
     "subtitle" : "subtitle",
     "text" : "this is text"
+  },
+  "link" : {
+    "name" : "See more!",
+    "href" : "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   }
 }
