@@ -10,5 +10,6 @@
     "Accommodations" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/data/accomd.json"
   },
   "footerAHref" : "https://github.com/ala2q6/CS456-P",
+  "footerATitle" : "footer logo",
   "footerImgSrc" : "https://cdn.discordapp.com/attachments/967994974568325130/968421364212056134/Behind_The_Project-logos_black.png"
 }
