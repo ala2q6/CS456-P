@@ -1,10 +1,15 @@
 {
   "body1" : {
     "title" : "Visual Impairment Awareness",
-    "text1" : "This page describes what visual impairments are.",
-    "text2" : "Often centered around a few basic categories, visual impairments represent a spectrum of anyone whose visual condition impacts their ability to successfully complete activities in everyday life [source: projectidealonline.org].",
-    "text3" : "According to the World Health Organization these categories are as follows: visual acuity between 6/12 to 6/18 is mild, visual acuity between 6/18 to 6/60 is moderate, visual acuity between 6/60 to 3/60 is severe, and visual acuity worse than 3/60 is blind [WHO.int].",
-    "text4" : "These classifications are likely to differ between sources, but they represent the general concept."
+    "text" : "This page describes what visual impairments are."
+  },
+  "body2" : {
+    "text" : "Often centered around a few basic categories, visual impairments represent a spectrum of anyone whose visual condition impacts their ability to successfully complete activities in everyday life [source: projectidealonline.org]."
+  },
+  "body3" : {
+    "text" : "According to the World Health Organization these categories are as follows: visual acuity between 6/12 to 6/18 is mild, visual acuity between 6/18 to 6/60 is moderate, visual acuity between 6/60 to 3/60 is severe, and visual acuity worse than 3/60 is blind [WHO.int]."
+  },
+  "body4" : {
+    "text" : "These classifications are likely to differ between sources, but they represent the general concept."
   }
-  
 }
