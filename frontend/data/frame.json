@@ -3,7 +3,7 @@
   "frameStyle" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/style/frame.json",
   "feedStyle" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/style/feed.json",
   "navigationDict" : {
-    "Default" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/data/default.json",
+    "Default" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/data/impairments.json",
     "Impacts" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/data/impacts.json",
     "Visual Impairments" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/data/impairments.json",
     "Accommodations" : "https://raw.githubusercontent.com/ala2q6/CS456-P/main/frontend/data/accomd.json"
