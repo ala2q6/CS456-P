@@ -1,8 +1,8 @@
 {
   "body1" : {
-    "title" : "Accommodations for people with Visual Impairments",
+    "title" : "Accommodations for People with Visual Impairments",
     "subtitle" : null,
-    "text" : "This page describes ways in which we can be accommodating to people with visual disabilities, in software design and otherwise."
+    "text" : "This page describes ways in which we can be accommodating to people with visual disabilities in software design."
   },
   "body2" : {
     "title" : null,
@@ -13,5 +13,9 @@
     "title" : null,
     "subtitle" : null,
     "text" : "It’s also important to design your application format in a way that conveys meaning. Ideas that lead well from one to another are important, and including small annotations on what different sections talk about can be helpful. Another thing that designers can implement is an alternative version of their application that has a simpler format for easier navigation and comprehension."
-  }
+  },
+  "body4" : {
+    "title" : null,
+    "subtitle" : null,
+    "text" : "Software designers should also be congnisant of the way their users navigation applications. Many people with visual impairments benefit from applications that allow for keyboard-only navigation."
 }
