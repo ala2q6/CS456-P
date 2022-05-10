@@ -7,11 +7,18 @@
   "body2" : {
     "title" : null,
     "subtitle" : null,
-    "text" : "Accessibility catering to the visually impaired is very important for them to function in our society. Since a very large portion of our information is gathered visually, the accommodations that are in place to help them get that information as well is crucial for their ability to function in a workplace setting or be able to enjoy leisure activities. Accommodation such as screen readers can greatly benefit people with visual impairments ability to obtain information on websites and articles. This helps them access the internet to be able to read news sites, browse the web, or even order things from online retailers confidently."
+    "text" : "There are several factors that affect people going through their daily life with a visual impairment. Access to information is available primarily visually in our daily lives, this makes having a visual impairment extremely difficult to accommodate. This results in people with the disability to have a lack of accessibility to information that is easily displayed for people with the ability to read signs, billboards, warnings for potential danger, etc. Because of this limitation on the availability of information, people with visual impairments have to deal with greater mental strain. Vision allows people to perceive something for a continuous period of time, whereas other senses that people may rely on (like hearing) allow people to experience things a discrete number of times. This requires greater memory recall abilities among people with visual impairments when performing tasks."
   },
   "body3" : {
     "title" : null,
     "subtitle" : null,
-    "text" : "The information gained through the internet is very important as it is often the most up to date information, also it is very important for some people to keep in contact through various social media platforms. This wouldn't normally be possible for people with visual impairments without the accessibility created by screen readers."
+    "text" : "Another factor that many people overlook about individuals living with a visual impairment is the lack of accessible work and work spaces. Since finding and keeping a stable job as a visually impaired person is so challenging, a lot of visually imapired people are negatively impacted financially and their financial independence also suffers as a result."
+  },
+  "body4" : {
+    "title" : null,
+    "subtitle" : null,
+    "text" : "Finally, the lack of accessibility online and for other leisurely activities on the internet is a problem for many visually impaired people. According to the World Blind Union, “more than 90% of all published material is not accessible to the blind or partially sighted”. The internet (even with the assistance of a screen reader program) is not completely accessible to the visually impaired either, as many websites and articles do not create their content to be accessible to people with visual impairments."
+
   }
 }
+  
