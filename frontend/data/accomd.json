@@ -1,1 +1,17 @@
-
+{
+  "body1" : {
+    "title" : "Accommodations for people with Visual Impairments",
+    "subtitle" : "",
+    "text" : "This page describes ways in which we can be accommodating to people with visual disabilities, in software design and otherwise."
+  },
+  "body2" : {
+    "title" : "",
+    "subtitle" : "",
+    "text" : ""
+  },
+  "body3" : {
+    "title" : "",
+    "subtitle" : "",
+    "text" : ""
+  }
+}
