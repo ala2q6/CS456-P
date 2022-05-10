@@ -7,11 +7,11 @@
   "body2" : {
     "title" : null,
     "subtitle" : null,
-    "text" : null
+    "text" : "There are many things you can do to implement accessibility within software applications. Foremost, it’s important to design your application in a way that will allow software such as screen readers and text enlargement to function properly. These tools are very valuable for people with visual impairments and it’s certain to be frustrating if they cannot use them. One thing you can do is give any non-text content an alternative text version for screen readers to scan."
   },
   "body3" : {
     "title" : null,
     "subtitle" : null,
-    "text" : null
+    "text" : "It’s also important to design your application format in a way that conveys meaning. Ideas that lead well from one to another are important, and including small annotations on what different sections talk about can be helpful. Another thing that designers can implement is an alternative version of their application that has a simpler format for easier navigation and comprehension."
   }
 }
