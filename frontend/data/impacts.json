@@ -1,9 +1,12 @@
 {
   "body1" : {
     "title" : "Impacts of Visual Impairments",
+    "subtitle" : null,
     "text" : "Accessibility catering to the visually impaired is very important for them to function in our society. Since a very large portion of our information is gathered visually, the accommodations that are in place to help them get that information as well is crucial for their ability to function in a workplace setting or be able to enjoy leisure activities. Accommodation such as screen readers can greatly benefit people with visual impairments ability to obtain information on websites and articles. This helps them access the internet to be able to read news sites, browse the web, or even order things from online retailers confidently."
   },
   "body2" : {
+    "title" : null,
+    "subtitle" : null,
     "text" : "The information gained through the internet is very important as it is often the most up to date information, also it is very important for some people to keep in contact through various social media platforms. This wouldn't normally be possible for people with visual impairments without the accessibility created by screen readers."
   }
 }
