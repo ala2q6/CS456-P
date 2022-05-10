@@ -19,5 +19,8 @@
     "subtitle" : null,
     "text" : "The information gained through the internet is very important as it is often the most up to date information, also it is very important for some people to keep in contact through various social media platforms. This wouldn't normally be possible for people with visual impairments without the accessibility created by screen readers."
   },
-  "image1" : "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ronniefloyd.com%2Fblog%2Fwp-content%2Fuploads%2FKansas-City-Skyline.jpg&f=1&nofb=1"
+  "image1" : {
+    "title" : "background of kansas city",
+    "src" : "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ronniefloyd.com%2Fblog%2Fwp-content%2Fuploads%2FKansas-City-Skyline.jpg&f=1&nofb=1"
+  }
 }
